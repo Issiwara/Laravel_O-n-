@@ -7,5 +7,5 @@ WORKDIR /app
 COPY . /app
 RUN composer install
 
-CMD php artisan serve --host=0.0.0.0 --port=3000
+CMD php artisan serve --host=13.211.208.176 --port=3000
 EXPOSE 3000
