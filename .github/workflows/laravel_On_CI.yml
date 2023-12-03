@@ -2,7 +2,7 @@ name: Build Result image
 
 on:
   push:
-    branches: ['master']
+    branches: ['main']
 
 jobs:
   build:
