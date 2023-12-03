@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build the Docker image
-        run: sudo docker build . -f Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
+        run: docker build . -f Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
 
       - name: Docker Push
-        run: sudo docker push ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
