@@ -19,11 +19,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build the Docker image
-        run: docker build . -f Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/laravelcrud
+        run: docker build . -f Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
 
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/laravelcrud
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
 
-      - name: Docker Push
-        run: docker rmi ${{ secrets.DOCKER_USERNAME }}/laravelcrud
+      - name: Docker delete
+        run: docker rmi ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
         
