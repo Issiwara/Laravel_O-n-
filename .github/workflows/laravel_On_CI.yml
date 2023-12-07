@@ -1,13 +1,12 @@
-name: Build Result image
+name: Docker Build and Push
 
 on:
   push:
-    branches: 
+    branches:
       - main
 
-
 jobs:
-  build:
+  build-and-push:
     runs-on: self-hosted
 
     steps:
