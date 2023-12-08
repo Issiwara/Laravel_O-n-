@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     
@@ -15,6 +15,12 @@ jobs:
       
       - name: Build the Docker image
         run: docker build . -f ./intermediate-app/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
+
+      - name: Login to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Push Docker Image
+        run: docker push your-dockerhub-username/laravelintermediateapp
 
 
 
