@@ -16,8 +16,7 @@ jobs:
       - name: Build the Docker image
         run: sudo docker build . -f ./intermediate-app/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
 
-      - name: Docker Push
-        run: sudo docker push ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
+
 
         
 
