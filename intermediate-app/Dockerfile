@@ -4,7 +4,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN docker-php-ext-install pdo_mysql
 COPY . /app
-COPY ./intermediate-app /app
 WORKDIR /app
 RUN composer install
 
