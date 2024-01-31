@@ -24,6 +24,6 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
 
       - name: Remove Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
+        run: docker rmi ${{ secrets.DOCKER_USERNAME }}/laravelintermediateapp
         
 
